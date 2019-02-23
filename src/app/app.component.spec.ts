@@ -2,15 +2,29 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { MotoServiceComponent } from './moto-service/moto-service.component';
+import { MotoManagementComponent } from './moto-management/moto-management.component';
+import { ButtonModule } from 'primeng/button';
+
+import {TableModule} from 'primeng/table';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        BrowserModule, TableModule,
+        AppRoutingModule, ButtonModule, HttpClientModule
       ],
+      providers: [],
       declarations: [
-        AppComponent
-      ],
+        AppComponent,
+        MotoServiceComponent,
+        MotoManagementComponent
+      ]
     }).compileComponents();
   }));
 
@@ -30,6 +44,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to my-moto-track!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to your mmotorbike managment!');
   });
 });
