@@ -1,0 +1,19 @@
+<div class = "center-table">
+    <p-table [columns]="cols" [value]="rows" [resizableColumns]="conf.isResizabled" [reorderableColumns]="conf.isReorderabled">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="conf.isSortabled ? col.field : null" pResizableColumn pReorderableColumn>
+                {{col.header}}
+                <p-sortIcon *ngIf="conf.isSortabled" [field]="col.field"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns" let-index="rowIndex">
+        <tr [pReorderableRow]="index" [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns" class="ui-resizable-column">
+                    {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+    </p-table>
+</div>
