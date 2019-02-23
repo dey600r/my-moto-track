@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="../assets/css/primeicons.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/theme.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/primeng.min.css" />
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to your mmotorbike managment!
+  </h1>
+  <app-moto-service [inputTable]="motoTable" (outputTable)="manageOutput($event)"></app-moto-service>
+
+  <button pButton type="button" label="Click" (click)="handleClick($event)"></button>
+</div>
+
+
+<router-outlet></router-outlet>
