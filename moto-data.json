@@ -1,0 +1,15 @@
+{
+  "motos" : [ {
+      "id": 1,
+      "brand" : "Yamaha",
+      "model" : "R6",
+      "year" : 2005
+      }, 
+      {
+        "id": 2,
+        "brand" : "Hyosung",
+        "model" : "gtr 125",
+        "year" : 2006
+      }
+    ]
+}

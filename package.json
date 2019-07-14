@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:casa": "concurrently \"json-server --watch prueba.json --port 5000\" \"ng serve\"",
-    "build:test": "concurrently \"json-server --watch prueba.json --port 6000\" \"ng test\""
+    "build:casa": "concurrently \"json-server --watch moto-data.json --port 5000\" \"ng serve\"",
+    "build:test": "concurrently \"json-server --watch moto-data.json --port 6000\" \"ng test\""
   },
   "private": true,
   "dependencies": {
