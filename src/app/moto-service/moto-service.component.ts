@@ -5,8 +5,8 @@ import { ReturnModel, ConfigurationModal } from '../shared/model/common.model';
 
 @Component({
   selector: 'app-moto-service',
-  templateUrl: './moto-service.component.html',
-  styleUrls: ['./moto-service.component.css']
+  styleUrls: ['./moto-service.component.css'],
+  templateUrl: './moto-service.component.html'
 })
 export class MotoServiceComponent implements OnInit {
 

@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'my-moto-track';
 
   motoTable: ReturnModel = new ReturnModel([], [], false, false);
+  testTable: ReturnModel = new ReturnModel([], [], false, false);
 
 
   mService: MotoServiceModel[] = [];
@@ -20,16 +21,14 @@ export class AppComponent {
   constructor(private motosService: MotosService) { }
 
   ngOnInit() {
-      this.mService = this.motosService.getListMotos();
-
-      this.cols = [
-          { field: 'brand', header: 'brand' },
-          { field: 'model', header: 'model' },
-          { field: 'year', header: 'year' }
-      ];
-
-      this.motoTable = new ReturnModel(this.mService.map(x => x.motos), this.cols, false, true, true, true, true);
-      
+    this.cols = [
+      { field: 'brand', header: 'brand' },
+      { field: 'model', header: 'model' },
+      { field: 'year', header: 'year' }
+    ];
+    this.motosService.getListMotos().subscribe(motos => {
+      this.motoTable = new ReturnModel(motos, this.cols, false, true, true, true, true);
+    });     
   }
 
 
@@ -37,7 +36,4 @@ export class AppComponent {
 
   }
 
-  handleClick(event: any) {
-    var res = this.motosService.pruebaTestMock();
-  }
 }

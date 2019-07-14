@@ -7,11 +7,14 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:casa": "concurrently \"json-server --watch prueba.json --port 5000\" \"ng serve\"",
+    "build:test": "concurrently \"json-server --watch prueba.json --port 6000\" \"ng test\""
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
+    "@angular/cdk": "^7.0.2",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
@@ -19,8 +22,10 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "concurrently": "^4.1.0",
     "core-js": "^2.5.4",
     "http-server": "^0.11.1",
+    "pack": "^2.2.0",
     "primeicons": "^1.0.0",
     "primeng": "^7.0.5",
     "rxjs": "~6.3.3",

@@ -4,6 +4,7 @@ export class MotoServiceModel {
 }
 
 export class MotoModel {
+    id: number;
     brand: string;
     model: string;
     year: number;
