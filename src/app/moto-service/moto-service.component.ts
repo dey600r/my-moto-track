@@ -17,10 +17,10 @@ export class MotoServiceComponent implements OnInit {
   cols: any[] = [];
   conf: ConfigurationModal = new ConfigurationModal(false, false);
 
-  constructor(private motosService: MotosService) { }
+  constructor(private motosService: MotosService) { 
+  }
 
     ngOnInit() {
-
     }
 
     ngOnChanges(changes: SimpleChange) {

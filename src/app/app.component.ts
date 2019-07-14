@@ -12,13 +12,12 @@ export class AppComponent {
   title = 'my-moto-track';
 
   motoTable: ReturnModel = new ReturnModel([], [], false, false);
-  testTable: ReturnModel = new ReturnModel([], [], false, false);
-
 
   mService: MotoServiceModel[] = [];
   cols: any[];
 
-  constructor(private motosService: MotosService) { }
+  constructor(private motosService: MotosService) { 
+  }
 
   ngOnInit() {
     this.cols = [

@@ -7,6 +7,7 @@ import { AppRoutingModule } from '../../app-routing.module';
 
 import { TableModule } from 'primeng/table';
 
+import { AppComponent } from '../../app.component';
 import { MotoServiceComponent } from '../../moto-service/moto-service.component';
 import { MotoManagementComponent } from '../../moto-management/moto-management.component';
 
@@ -14,8 +15,8 @@ import { MotosService } from '../service/motos.service';
 
 export class SharedTest {
     static ALL = {
-        declarations: [MotoServiceComponent, MotoManagementComponent],
-        export: [MotoServiceComponent, MotoManagementComponent],
+        declarations: [MotoServiceComponent, MotoManagementComponent, AppComponent],
+        export: [MotoServiceComponent, MotoManagementComponent, AppComponent],
         imports: [
           BrowserModule, CommonModule, FormsModule, TableModule, AppRoutingModule, HttpClientModule
         ],
