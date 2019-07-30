@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'my-moto-track';
 
   motoTable: ReturnModel = new ReturnModel([], [], false, false);
+  motoTable1: ReturnModel = new ReturnModel([], [], false, false);
 
   mService: MotoServiceModel[] = [];
   cols: any[];
@@ -27,7 +28,10 @@ export class AppComponent {
     ];
     this.motosService.getListMotos().subscribe(motos => {
       this.motoTable = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });     
+    });  
+    this.motosService.getListMotos1("1").subscribe(motos => {
+      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
+    });   
   }
 
 

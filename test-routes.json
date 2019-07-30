@@ -1,4 +1,3 @@
 {
-  "/api/get/motos": "/motos",
-  "/api/get/hola": "/motos"
+  "/api/get/motos": "/motos"
 }

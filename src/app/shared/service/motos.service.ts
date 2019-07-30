@@ -20,4 +20,8 @@ export class MotosService {
   getListMotos(): Observable<any> {
     return this.http.get(this.url + '/motos?_sort=id&_order=desc');
   }
+
+  getListMotos1(id: string): Observable<any> {
+    return this.http.get(this.url + '/api/get/motos?id=' + id);
+  }
 }
