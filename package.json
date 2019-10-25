@@ -12,7 +12,9 @@
         "primeng/table": ".node_modules/primeng/table"
       }
     },
-    "whitelistedNonPeerDependencies": ["."]
+    "whitelistedNonPeerDependencies": [
+      "."
+    ]
   },
   "scripts": {
     "ng": "ng",
