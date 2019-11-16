@@ -29,9 +29,11 @@ export class AppComponent {
     this.motosService.getListMotos().subscribe(motos => {
       this.motoTable = new ReturnModel(motos, this.cols, false, true, true, true, true);
     });  
-    this.motosService.getListMotos1("3").subscribe(motos => {
+    this.motosService.getListMotos1("2").subscribe(motos => {
       this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
     });   
+
+  // HOLA GIT
   }
 
 
