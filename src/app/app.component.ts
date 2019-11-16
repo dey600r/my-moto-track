@@ -33,20 +33,7 @@ export class AppComponent {
       this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
     });   
 
-
-    this.motosService.getListMotos1("2").subscribe(motos => {
-      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });  this.motosService.getListMotos1("2").subscribe(motos => {
-      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });  this.motosService.getListMotos1("2").subscribe(motos => {
-      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });  this.motosService.getListMotos1("2").subscribe(motos => {
-      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });  this.motosService.getListMotos1("2").subscribe(motos => {
-      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });  this.motosService.getListMotos1("2").subscribe(motos => {
-      this.motoTable1 = new ReturnModel(motos, this.cols, false, true, true, true, true);
-    });  
+  // HOLA GIT
   }
 
 
