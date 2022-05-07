@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "Test",
+  "title": "basic",
+  "type": "object",
+  "properties": {
+	  "name": {
+  	  "type": "string",
+  	  "x-prompt": "Insert a name of demo grid component:",
+      "$default": {
+        "$source": "demo-grid-table",
+        "index": 0
+      }
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
