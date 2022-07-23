@@ -25,10 +25,16 @@
     "e2e": "ng e2e",
     "build:casa": "concurrently \"json-server --watch moto-data.json --port 5000\" \"ng serve\"",
     "build:test": "concurrently \"json-server --watch test-data.json --routes test-routes.json --port 5001\" \"ng test\"",
-    "build:pack": "ng-packagr -p package.json && cp *.tgz ./dist_pack && cd dist_pack && npm pack && cd ..",
+    "build:pack": "ng-packagr -p package.json && cd dist_pack && npm pack && cd ..",
     "build:pack-demo": "cd demo-grid-table && npm run build:pack && npm i demo-grid-table",
     "generate:demo-grid-table": "ng g demo-grid-table:demo-grid-table --name=fer"
   },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./demo-grid-table/src/collection.json",
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
@@ -42,7 +48,6 @@
     "@angular/router": "~7.2.0",
     "concurrently": "^4.1.0",
     "core-js": "^2.5.4",
-    "demo-grid-table": "file:demo-grid-table-0.0.2.tgz",
     "http-server": "^0.11.1",
     "json-server": "^0.15.0",
     "ng-packagr": "^5.4.3",
@@ -58,10 +63,11 @@
     "@angular/cli": "~7.3.1",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "demo-grid-table": "file:demo-grid-table",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
